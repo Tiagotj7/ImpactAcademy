@@ -12,10 +12,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://instagram.com', icon: '📸' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: '💼' },
-  { label: 'YouTube', href: 'https://youtube.com', icon: '▶️' },
-  { label: 'TikTok', href: 'https://tiktok.com', icon: '🎵' },
+  { label: 'Instagram', href: 'https://instagram.com'},
+  { label: 'LinkedIn', href: 'https://linkedin.com'},
+  { label: 'YouTube', href: 'https://youtube.com'},
+  { label: 'TikTok', href: 'https://tiktok.com'},
 ];
 
 const programs = [
@@ -139,7 +139,6 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#BDBDBD] hover:text-[#D4AF37] text-sm transition-colors font-body group"
                 >
-                  <span className="text-base">{s.icon}</span>
                   <span>{s.label}</span>
                   <ExternalLink size={12} className="opacity-0 group-hover:opacity-60 transition-opacity ml-auto" />
                 </a>
@@ -149,7 +148,7 @@ export default function Footer() {
             {/* CTA */}
             <div className="mt-8">
               <a
-                href="https://wa.me/5571999999999"
+                href="https://wa.me/5575981482035"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary relative z-10 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-body overflow-hidden group w-full"

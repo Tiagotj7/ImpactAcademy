@@ -98,7 +98,7 @@ export default function CTA() {
           </button>
 
           <a
-            href="https://wa.me/5571999999999?text=Olá!%20Tenho%20interesse%20nos%20programas%20da%20Impact%20Academy®"
+            href="https://wa.me/5575981482035?text=Olá!%20Tenho%20interesse%20nos%20programas%20da%20Impact%20Academy®"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline flex items-center gap-3 px-10 py-5 rounded-xl text-lg font-body w-full sm:w-auto justify-center"

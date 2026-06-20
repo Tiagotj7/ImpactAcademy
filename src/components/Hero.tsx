@@ -160,7 +160,7 @@ export default function Hero() {
               />
 
               <img
-                src="https://images.pexels.com/photos/7433929/pexels-photo-7433929.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=600"
+                src="src/assets/images/CrislanDeTerno.png"
                 alt="Líder Impact Academy"
                 className="relative z-[5] w-full h-[620px] object-cover rounded-2xl"
                 style={{ filter: 'brightness(0.85) contrast(1.1)' }}

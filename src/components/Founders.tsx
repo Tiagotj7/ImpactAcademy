@@ -14,9 +14,9 @@ const founders = [
     delay: 0.1,
   },
   {
-    name: 'Thiago',
+    name: 'Tiago Carvalho',
     role: 'COO & Diretor de Tecnologia',
-    initials: 'TH',
+    initials: 'TC',
     description:
       'Responsável por tecnologia, automação, CRM, segurança digital e escalabilidade da operação. Arquiteto da infraestrutura que sustenta o crescimento da Impact Academy.',
     expertise: ['Tecnologia', 'Automação', 'CRM', 'Segurança Digital'],
