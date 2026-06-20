@@ -47,11 +47,7 @@ export default function Navbar() {
               onClick={() => handleNav('#inicio')}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="relative">
-                <div className="w-10 h-10 rounded-lg gradient-gold flex items-center justify-center glow-gold-sm">
-                  <span className="text-[#050505] font-black text-sm font-body">IA</span>
-                </div>
-              </div>
+
               <div>
                 <span className="text-white font-black text-lg tracking-wider font-body">IMPACT</span>
                 <span className="text-[#D4AF37] font-black text-lg tracking-wider font-body"> ACADEMY</span>
