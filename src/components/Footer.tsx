@@ -35,17 +35,17 @@ export default function Footer() {
   };
 
   return (
-    <footer ref={ref} className="relative bg-[#030303] pt-20 pb-8 overflow-hidden">
+    <footer ref={ref} className="relative bg-[#030303] pt-16 sm:pt-20 pb-8 overflow-hidden">
       {/* Top border */}
       <div className="absolute top-0 left-0 right-0 h-px gradient-gold opacity-40" />
 
       {/* Background */}
-      <div className="absolute top-0 left-0 right-0 h-48 opacity-[0.04]"
+      <div className="absolute top-0 left-0 right-0 h-48 opacity-[0.04] hidden sm:block"
         style={{ background: 'linear-gradient(180deg, #D4AF37, transparent)' }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +163,7 @@ export default function Footer() {
         <div className="section-divider opacity-20 mb-8" />
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-[#BDBDBD]/50 text-sm font-body text-center sm:text-left">
             © 2026 Impact Academy®. Todos os direitos reservados.
           </p>

@@ -18,10 +18,10 @@ export default function About() {
   const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
 
   return (
-    <section id="sobre" ref={ref} className="relative py-28 bg-[#050505] overflow-hidden">
+    <section id="sobre" ref={ref} className="relative py-20 sm:py-28 bg-[#050505] overflow-hidden">
       {/* Background accents */}
       <div className="absolute top-0 left-0 right-0 section-divider opacity-30" />
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full opacity-5"
+      <div className="absolute top-1/2 right-0 hidden lg:block w-[500px] h-[500px] rounded-full opacity-5"
         style={{ background: 'radial-gradient(circle, #D4AF37, transparent 70%)' }}
       />
 
@@ -36,14 +36,14 @@ export default function About() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Nossa História
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 leading-tight">
             O QUE É A{' '}
             <span className="gradient-text-gold">IMPACT ACADEMY?</span>
           </h2>
           <div className="mt-4 mx-auto w-24 h-0.5 gradient-gold rounded-full" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -56,7 +56,7 @@ export default function About() {
               <img
                 src="https://images.pexels.com/photos/7794035/pexels-photo-7794035.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=700"
                 alt="Impact Academy Team"
-                className="w-full h-[500px] object-cover rounded-2xl"
+                className="w-full h-[320px] sm:h-[500px] object-cover rounded-2xl"
                 style={{ filter: 'brightness(0.8) contrast(1.1)' }}
               />
               <div className="absolute inset-0 rounded-2xl z-[5]"
@@ -68,7 +68,7 @@ export default function About() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-6 -right-6 glass-dark rounded-2xl p-5 border border-[#D4AF37]/25 z-20 max-w-xs"
+              className="absolute -bottom-6 -right-6 hidden sm:block glass-dark rounded-2xl p-5 border border-[#D4AF37]/25 z-20 max-w-xs"
             >
               <p className="text-[#D4AF37] font-bold text-sm font-body mb-1">Nossa Missão</p>
               <p className="text-white text-sm font-body leading-relaxed">
@@ -80,7 +80,7 @@ export default function About() {
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -top-6 -left-6 glass-dark rounded-2xl p-4 border border-[#D4AF37]/25 z-20"
+              className="absolute -top-6 -left-6 hidden sm:block glass-dark rounded-2xl p-4 border border-[#D4AF37]/25 z-20"
             >
               <p className="text-[#D4AF37] font-bold text-xs font-body mb-2 tracking-wider uppercase">Visão</p>
               <p className="text-[#BDBDBD] text-xs font-body leading-relaxed max-w-[180px]">
@@ -95,19 +95,19 @@ export default function About() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.35 }}
           >
-            <p className="text-[#BDBDBD] text-lg leading-relaxed mb-6 font-body">
+            <p className="text-[#BDBDBD] text-base sm:text-lg leading-relaxed mb-6 font-body">
               A <span className="text-[#D4AF37] font-semibold">Impact Academy</span> nasceu com a missão de desenvolver pessoas e organizações através de uma metodologia focada em{' '}
               <span className="text-white font-medium">liderança</span>,{' '}
               <span className="text-white font-medium">propósito</span>,{' '}
               <span className="text-white font-medium">disciplina</span> e{' '}
               <span className="text-white font-medium">alta performance</span>.
             </p>
-            <p className="text-[#BDBDBD] text-lg leading-relaxed mb-10 font-body">
+            <p className="text-[#BDBDBD] text-base sm:text-lg leading-relaxed mb-10 font-body">
               Nossa missão é acelerar o crescimento humano e profissional para transformar potencial em legado — gerando impacto real na vida de líderes, atletas, jovens e empresários.
             </p>
 
             {/* Highlights */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {highlights.map((h, i) => (
                 <motion.div
                   key={i}

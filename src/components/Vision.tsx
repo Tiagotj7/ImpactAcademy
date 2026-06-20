@@ -19,11 +19,11 @@ export default function Vision() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
-    <section id="visao" ref={ref} className="relative py-28 overflow-hidden bg-[#050505]">
+    <section id="visao" ref={ref} className="relative py-20 sm:py-28 overflow-hidden bg-[#050505]">
       <div className="absolute top-0 left-0 right-0 section-divider opacity-20" />
 
       {/* Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full opacity-[0.04]"
+      <div className="absolute top-1/2 left-1/2 hidden lg:block -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full opacity-[0.04]"
         style={{ background: 'radial-gradient(ellipse, #D4AF37, transparent 70%)' }}
       />
 
@@ -38,17 +38,17 @@ export default function Vision() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Expansão
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
             NOSSO <span className="gradient-text-gold">FUTURO</span>
           </h2>
-          <p className="text-[#BDBDBD] text-lg mt-4 max-w-2xl mx-auto font-body">
+          <p className="text-[#BDBDBD] text-base sm:text-lg mt-4 max-w-2xl mx-auto font-body">
             Temos uma visão clara de onde estamos indo. Cada meta é parte de um legado maior que estamos construindo.
           </p>
           <div className="mt-6 mx-auto w-24 h-0.5 gradient-gold rounded-full" />
         </motion.div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {visions.map((v, i) => (
             <motion.div
               key={i}
@@ -56,7 +56,7 @@ export default function Vision() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.05 + i * 0.07 }}
               whileHover={{ y: -6, borderColor: 'rgba(212,175,55,0.5)' }}
-              className="group glass rounded-2xl p-6 border border-[#D4AF37]/10 transition-all duration-400"
+              className="group glass rounded-2xl p-5 sm:p-6 border border-[#D4AF37]/10 transition-all duration-400"
             >
               <div className="w-12 h-12 rounded-xl border border-[#D4AF37]/20 group-hover:border-[#D4AF37]/50 flex items-center justify-center mb-4 transition-all"
                 style={{ background: 'rgba(212,175,55,0.06)' }}

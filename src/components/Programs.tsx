@@ -95,13 +95,13 @@ function ProgramCard({ program, index, inView }: { program: typeof programs[0]; 
     >
       {/* Featured badge */}
       {program.featured && (
-        <div className="absolute top-4 right-4 z-20 gradient-gold rounded-full px-3 py-1 text-[#050505] text-xs font-black font-body tracking-wider">
+        <div className="absolute top-4 right-4 z-20 gradient-gold rounded-full px-3 py-1 text-[#050505] text-[10px] sm:text-xs font-black font-body tracking-wider">
           MAIS POPULAR
         </div>
       )}
 
       {/* Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-44 sm:h-48 overflow-hidden">
         <img
           src={program.image}
           alt={program.title}
@@ -119,11 +119,11 @@ function ProgramCard({ program, index, inView }: { program: typeof programs[0]; 
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-5 sm:p-6">
         <p className="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase font-body mb-2">
           {program.subtitle}
         </p>
-        <h3 className="text-white font-black text-2xl mb-3 font-display">{program.title}</h3>
+        <h3 className="text-white font-black text-xl sm:text-2xl mb-3 font-display">{program.title}</h3>
         <p className="text-[#BDBDBD] text-sm leading-relaxed font-body mb-5">
           {program.description}
         </p>
@@ -167,9 +167,9 @@ export default function Programs() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
-    <section id="programas" ref={ref} className="relative py-28 bg-[#050505] overflow-hidden">
+    <section id="programas" ref={ref} className="relative py-20 sm:py-28 bg-[#050505] overflow-hidden">
       <div className="absolute top-0 left-0 right-0 section-divider opacity-20" />
-      <div className="absolute left-1/4 top-1/2 w-[600px] h-[600px] rounded-full opacity-[0.04]"
+      <div className="absolute left-1/4 top-1/2 hidden lg:block w-[600px] h-[600px] rounded-full opacity-[0.04]"
         style={{ background: 'radial-gradient(circle, #D4AF37, transparent 70%)' }}
       />
 
@@ -184,11 +184,11 @@ export default function Programs() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Nossos Programas
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
             PROGRAMAS{' '}
             <span className="gradient-text-gold">IMPACT ACADEMY</span>
           </h2>
-          <p className="text-[#BDBDBD] text-lg mt-4 max-w-2xl mx-auto font-body">
+          <p className="text-[#BDBDBD] text-base sm:text-lg mt-4 max-w-2xl mx-auto font-body">
             Escolha o programa que mais se alinha ao seu momento e objetivos. Cada um foi criado para gerar transformação real.
           </p>
           <div className="mt-6 mx-auto w-24 h-0.5 gradient-gold rounded-full" />

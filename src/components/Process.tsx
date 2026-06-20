@@ -44,7 +44,7 @@ export default function Process() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
 
   return (
-    <section id="processo" ref={ref} className="relative py-28 overflow-hidden"
+    <section id="processo" ref={ref} className="relative py-20 sm:py-28 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #050505 0%, #0A0A0A 100%)' }}
     >
       <div className="absolute top-0 left-0 right-0 section-divider opacity-20" />
@@ -60,10 +60,10 @@ export default function Process() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Passo a Passo
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
             COMO <span className="gradient-text-gold">FUNCIONA</span>
           </h2>
-          <p className="text-[#BDBDBD] text-lg mt-4 max-w-2xl mx-auto font-body">
+          <p className="text-[#BDBDBD] text-base sm:text-lg mt-4 max-w-2xl mx-auto font-body">
             Um processo claro e estruturado para guiar sua jornada de transformação.
           </p>
           <div className="mt-6 mx-auto w-24 h-0.5 gradient-gold rounded-full" />

@@ -6,7 +6,7 @@ export default function CTA() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section id="cta" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="cta" ref={ref} className="relative py-20 sm:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0"
         style={{
@@ -19,7 +19,7 @@ export default function CTA() {
       <div className="absolute bottom-0 left-0 right-0 h-px gradient-gold opacity-60" />
 
       {/* Radial glow center */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full opacity-[0.12]"
+      <div className="absolute top-1/2 left-1/2 hidden lg:block -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full opacity-[0.12]"
         style={{ background: 'radial-gradient(ellipse, #D4AF37, transparent 70%)' }}
       />
 
@@ -65,7 +65,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6"
+          className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.02] sm:leading-[1.05] mb-6"
         >
           <span className="text-white">VOCÊ ESTÁ PRONTO</span>
           <br />
@@ -77,7 +77,7 @@ export default function CTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-[#BDBDBD] text-xl leading-relaxed mb-12 font-body"
+          className="text-[#BDBDBD] text-base sm:text-xl leading-relaxed mb-12 font-body"
         >
           Seu próximo nível começa agora.{' '}
           <span className="text-white font-semibold">
@@ -92,7 +92,7 @@ export default function CTA() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <button className="btn-primary relative z-10 flex items-center gap-3 px-10 py-5 rounded-xl text-lg font-body overflow-hidden group w-full sm:w-auto justify-center">
+          <button className="btn-primary relative z-10 flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg font-body overflow-hidden group w-full sm:w-auto justify-center">
             <span className="relative z-10">Quero Fazer Parte</span>
             <ArrowRight size={20} className="relative z-10 transition-transform group-hover:translate-x-1" />
           </button>
@@ -101,7 +101,7 @@ export default function CTA() {
             href="https://wa.me/5575981482035?text=Olá!%20Tenho%20interesse%20nos%20programas%20da%20Impact%20Academy®"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline flex items-center gap-3 px-10 py-5 rounded-xl text-lg font-body w-full sm:w-auto justify-center"
+            className="btn-outline flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-lg font-body w-full sm:w-auto justify-center"
           >
             <MessageCircle size={20} />
             Falar no WhatsApp

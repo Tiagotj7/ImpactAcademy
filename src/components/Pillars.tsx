@@ -37,7 +37,7 @@ export default function Pillars() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section id="pilares" ref={ref} className="relative py-28 overflow-hidden"
+    <section id="pilares" ref={ref} className="relative py-20 sm:py-28 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #050505 0%, #0A0A0A 50%, #050505 100%)' }}
     >
       {/* Background decorative lines */}
@@ -58,10 +58,10 @@ export default function Pillars() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Fundamentos
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
             NOSSOS <span className="gradient-text-gold">PILARES</span>
           </h2>
-          <p className="text-[#BDBDBD] text-lg mt-4 max-w-2xl mx-auto font-body">
+          <p className="text-[#BDBDBD] text-base sm:text-lg mt-4 max-w-2xl mx-auto font-body">
             A base que sustenta cada programa, metodologia e transformação que promovemos.
           </p>
           <div className="mt-6 mx-auto w-24 h-0.5 gradient-gold rounded-full" />
@@ -76,7 +76,7 @@ export default function Pillars() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: pillar.delay }}
               whileHover={{ y: -10 }}
-              className="group glass rounded-2xl p-8 border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-400 text-center cursor-default"
+              className="group glass rounded-2xl p-6 sm:p-8 border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-400 text-center cursor-default"
               style={{ boxShadow: '0 4px 30px rgba(0,0,0,0.3)' }}
             >
               {/* Icon container */}
@@ -95,7 +95,7 @@ export default function Pillars() {
               </div>
 
               {/* Number */}
-              <div className="text-[#D4AF37]/20 font-black text-6xl absolute top-4 right-4 font-body select-none">
+              <div className="text-[#D4AF37]/20 font-black text-5xl sm:text-6xl absolute top-4 right-4 font-body select-none">
                 {String(i + 1).padStart(2, '0')}
               </div>
 

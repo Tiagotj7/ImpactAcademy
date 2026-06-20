@@ -83,11 +83,11 @@ export default function Testimonials() {
   const visibleIndices = getVisibleIndices();
 
   return (
-    <section ref={ref} className="relative py-28 overflow-hidden"
+    <section ref={ref} className="relative py-20 sm:py-28 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #050505 0%, #0A0A0A 100%)' }}
     >
       <div className="absolute top-0 left-0 right-0 section-divider opacity-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full opacity-[0.04]"
+      <div className="absolute top-1/2 left-1/2 hidden lg:block -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full opacity-[0.04]"
         style={{ background: 'radial-gradient(ellipse, #D4AF37, transparent 70%)' }}
       />
 
@@ -102,7 +102,7 @@ export default function Testimonials() {
           <span className="text-[#D4AF37] text-sm font-semibold tracking-[0.3em] uppercase font-body">
             Depoimentos
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">
             O QUE DIZEM NOSSOS{' '}
             <span className="gradient-text-gold">ALUNOS</span>
           </h2>
@@ -152,7 +152,7 @@ export default function Testimonials() {
 
           {/* Mobile: single card */}
           <div className="md:hidden mb-8">
-            <div className="glass rounded-2xl p-6 border border-[#D4AF37]/30">
+            <div className="glass rounded-2xl p-5 border border-[#D4AF37]/30">
               <Quote size={28} className="text-[#D4AF37]/25 mb-4" />
               <p className="text-[#BDBDBD] text-sm leading-relaxed font-body mb-6 italic">
                 "{testimonials[current].text}"
@@ -170,7 +170,7 @@ export default function Testimonials() {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
             <button
               onClick={prev}
               className="w-12 h-12 rounded-full glass border border-[#D4AF37]/25 hover:border-[#D4AF37]/50 flex items-center justify-center text-[#D4AF37] transition-all hover:bg-[#D4AF37]/10"

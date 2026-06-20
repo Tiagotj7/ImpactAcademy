@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, Users, Star, Layers, Zap } from 'lucide-react';
+import crislanTernoImage from '../assets/images/CrislanDeTerno.png';
 
 const stats = [
   { icon: Users, value: '+100', label: 'Pessoas Impactadas' },
@@ -32,7 +33,7 @@ export default function Hero() {
       {particles.map((p, i) => (
         <div
           key={i}
-          className="particle"
+          className="particle hidden md:block"
           style={{
             width: p.size * 4,
             height: p.size * 4,
@@ -53,12 +54,12 @@ export default function Hero() {
       />
 
       {/* Radial glow left */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 w-[600px] h-[600px] rounded-full opacity-10"
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 hidden lg:block w-[600px] h-[600px] rounded-full opacity-10"
         style={{ background: 'radial-gradient(circle, #D4AF37, transparent 70%)' }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div>
             {/* Badge */}
@@ -79,7 +80,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.35 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-6"
+              className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.02] sm:leading-[1.05] mb-5 sm:mb-6"
             >
               <span className="text-white">TRANSFORMAMOS</span>
               <br />
@@ -93,7 +94,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-[#BDBDBD] text-lg leading-relaxed mb-10 max-w-xl font-body"
+              className="text-[#BDBDBD] text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl font-body"
             >
               Desenvolvemos líderes, atletas, jovens e empresários para alcançarem resultados extraordinários através da{' '}
               <span className="text-[#D4AF37] font-semibold">liderança</span>,{' '}
@@ -110,14 +111,14 @@ export default function Hero() {
             >
               <button
                 onClick={() => handleScroll('#cta')}
-                className="btn-primary relative z-10 flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-body overflow-hidden group"
+                className="btn-primary relative z-10 flex w-full sm:w-auto items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl text-base font-body overflow-hidden group"
               >
                 <span className="relative z-10">Quero Evoluir</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
               <button
                 onClick={() => handleScroll('#sobre')}
-                className="btn-outline flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-body"
+                className="btn-outline flex w-full sm:w-auto items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl text-base font-body"
               >
                 <MessageCircle size={18} />
                 Agendar Conversa
@@ -129,16 +130,16 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4"
+              className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
             >
               {stats.map((stat, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.05 }}
-                  className="glass rounded-xl p-4 text-center border border-[#D4AF37]/10 card-hover"
+                  className="glass rounded-xl p-3 sm:p-4 text-center border border-[#D4AF37]/10 card-hover"
                 >
                   <stat.icon size={20} className="text-[#D4AF37] mx-auto mb-2" />
-                  <div className="text-[#D4AF37] font-black text-xl font-body">{stat.value}</div>
+                  <div className="text-[#D4AF37] font-black text-lg sm:text-xl font-body">{stat.value}</div>
                   <div className="text-[#BDBDBD] text-xs leading-tight font-body mt-1">{stat.label}</div>
                 </motion.div>
               ))}
@@ -150,7 +151,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="relative hidden lg:block"
+            className="relative block mt-10 lg:mt-0"
           >
             <div className="relative rounded-2xl overflow-hidden">
               {/* Gold border glow */}
@@ -160,9 +161,9 @@ export default function Hero() {
               />
 
               <img
-                src="src/assets/images/CrislanDeTerno.png"
+                src={crislanTernoImage}
                 alt="Líder Impact Academy"
-                className="relative z-[5] w-full h-[620px] object-cover rounded-2xl"
+                className="relative z-[5] w-full h-[360px] sm:h-[420px] lg:h-[620px] object-cover rounded-2xl"
                 style={{ filter: 'brightness(0.85) contrast(1.1)' }}
               />
 
@@ -175,7 +176,7 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute bottom-6 left-6 right-6 z-10 glass-dark rounded-xl p-4 border border-[#D4AF37]/20"
+                className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10 glass-dark rounded-xl p-3 sm:p-4 border border-[#D4AF37]/20"
               >
                 <p className="text-[#D4AF37] font-semibold text-sm font-body mb-1">
                   "Comunidade em Crescimento"
@@ -186,17 +187,17 @@ export default function Hero() {
               </motion.div>
 
               {/* Badge top right */}
-              <div className="absolute top-6 right-6 z-10 glass-dark rounded-xl p-3 border border-[#D4AF37]/30 text-center">
-                <div className="text-[#D4AF37] font-black text-xl font-body">+100</div>
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 glass-dark rounded-xl p-2 sm:p-3 border border-[#D4AF37]/30 text-center">
+                <div className="text-[#D4AF37] font-black text-lg sm:text-xl font-body">+100</div>
                 <div className="text-[#BDBDBD] text-xs font-body">Impactados</div>
               </div>
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-20"
+            <div className="absolute -top-8 -right-8 hidden lg:block w-32 h-32 rounded-full opacity-20"
               style={{ background: 'radial-gradient(circle, #D4AF37, transparent)' }}
             />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full opacity-15"
+            <div className="absolute -bottom-8 -left-8 hidden lg:block w-24 h-24 rounded-full opacity-15"
               style={{ background: 'radial-gradient(circle, #D4AF37, transparent)' }}
             />
           </motion.div>
@@ -212,7 +213,7 @@ export default function Hero() {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
       >
         <span className="text-[#BDBDBD] text-xs tracking-widest uppercase font-body">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-[#D4AF37] to-transparent" />
